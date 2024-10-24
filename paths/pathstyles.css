@@ -1,0 +1,13 @@
+Body{
+    background-color: black;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+color: rgb(0, 0, 0);
+}
+#container{
+    width: 1440px;
+    height: 200px;
+    background-color: aliceblue;
+    font-size: larger;
+    
+
+}
