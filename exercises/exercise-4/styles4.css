@@ -1,0 +1,27 @@
+body{
+    background-color: darkgreen;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 40px;
+
+}
+
+#container{
+    margin: auto;
+    background-color: rgb(255, 255, 255);
+    width: 1440px;
+}
+
+#nav{
+   font-size: 75px;
+}
+
+#pic{
+    width: 500px;
+    height: 400px;
+}
+
+
+
+
+
+
