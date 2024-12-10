@@ -262,25 +262,37 @@
             display: flex;
         }
 
-        @media (max-width:800px){
-            #container{
-                width: 90%
-                
+        @media (max-width:700px){
+            #nav {
+                flex-direction: column;
+                align-items: center;
             }
-        }
 
-        @media (max-width:800px){
+            #nav li{
+                margin-bottom: 10px;
+            }
+
+            #slogan{
+                gap: 15px;
+            }
+
             img{
-                width: 100%;
+                max-width: fit-content;
+                max-height: fit-content;
+            }
+
+        }
+
+        @media (max-width: 480px){
+            nav li a{
+                font-size: 16px
+            }
+
+            h1{
+                font-size: 24px
             }
         }
 
-        @media (max-width: 800px){
-            nav{
-                background-color: rgb(114, 6, 6);
-                color: white;
-            }
-        }
 
 
 
