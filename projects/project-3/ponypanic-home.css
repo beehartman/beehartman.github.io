@@ -1,0 +1,286 @@
+.new-rocker-regular {
+    font-family: "New Rocker", system-ui;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+/*  // <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 200 to 1000 */
+
+.nunito-sans{
+  font-family: "Nunito Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100,
+    "YTLC" 500;
+}
+        
+        
+        
+        body{
+            background-image: url(images/radial_pattern_blk2\ copy.png);
+            background-repeat: repeat;
+        }
+        #container{
+            width: 1440px;
+            margin: 0px auto;
+            background-color: rgb(114, 6, 6);
+            border: 15px solid white;
+        }
+
+        nav{
+            background-color: white;
+            color: black;
+            display: flex;
+            list-style: none;
+            font-size: 55px;
+            justify-content: center;
+            gap: 50px;
+        }
+
+        nav li a{
+            text-decoration: none;
+        }
+
+        nav a{
+            color: black;
+        }
+
+        nav li a:hover{
+            background-color: rgb(114, 6, 6);
+        }
+
+        nav li a:active{
+            text-decoration: underline;
+            color:  rgb(114, 6, 6);
+        }
+
+        #slogan{
+            background-image: url(images/pp_pattern1.png);
+            background-repeat:repeat;
+            color: white;
+            height: 600px;
+            text-align: center;
+            font-size: 65px;
+            padding-top: 250px;
+        }
+
+        #banners{
+            background-image: url(images/about-bg.png);
+            background-repeat: repeat;
+            color: white;
+            height: 460px;
+            text-align: center;
+            font-size: 65px;
+            padding-top: 100px;
+        }
+
+        #banners a{
+            color: white;
+            font-size: smaller;
+        }
+
+        #about-img{
+            background-color: white;
+            height: auto;
+            padding-left: 200px;
+        }
+        #about-content{
+            background-color: white;
+            height: auto;
+            display: flex;
+            text-align: center;
+        }
+
+        #focus1{
+            padding-left: 300px;
+            padding-right: 500px;
+            padding-top: -300px;
+        }
+
+        #mission1{
+            padding-left: 200px;
+        }
+
+        #about-text{
+            background-color:  rgb(114, 6, 6);
+            color: white;
+            height: auto;
+            display:flex;
+            padding-left: 20px;
+        }
+        #focus2{
+            width: 720px;
+           font-size: 35px;
+           padding: 20px;
+        }
+
+        #mission2{
+            font-size: 35px;
+            width: 720px;
+            padding: 20px;
+        }
+
+       
+
+        #shop{
+            background-color: rgb(114, 6, 6);
+            height: auto;
+            color: white;
+            text-align: center;
+            font-size: 70px;
+        }
+
+        #category{
+            background-color: rgb(114, 6, 6);
+            height: 850px;
+            display: flex;
+            color: white;
+            justify-content: center;
+        }
+
+        #new-arrivals{
+            width: 575px;
+            height: 640px;
+            text-align: center;
+            font-size: 55px;
+            margin-right: 80px;
+        }
+
+        #stickers{
+            width: 575px;
+            height: 640px;
+            text-align: center;
+            font-size: 55px;
+        }
+
+        .contact{
+            background-image: url(images/pp_pattern2.png);
+            background-repeat: repeat;
+            height: 518px;
+            display: flex;
+            justify-content: center;
+            padding-top: 150px;
+        }
+
+        #info{
+            background-color: white;
+            width: 242px;
+            height: 358.3px;
+            text-align: center;
+            font-size: 25px;
+            color: black;
+            list-style: none;
+        }
+
+        #info li a{
+            text-decoration: none;
+        }
+
+        #info a{
+            color: black;
+        }
+
+        #contact-info{
+            background-color: white;
+            width: 255px;
+            height: 358.3px;
+            text-align: center;
+            color: black;
+            font-size: 25px;
+        }
+
+        #newsletter{
+            background-color: white;
+            width: 325px;
+            height: 358.3px;
+            padding-left: 25px;
+        }
+
+
+        #login-banner{
+            background-image: url(images/pp_pattern4.png);
+            background-repeat: repeat;
+            height: 460px;
+            color: white;
+            font-size: 65px;
+            text-align: center;
+        }
+
+        #login-bg{
+            background-image: url(images/boxes.png);
+        }
+
+        #login-stuff{
+            background-color: white;
+            height: 720px;
+            text-align: center;
+        }
+
+        #password{
+            display: flex;
+
+        }
+        .con1{
+            margin-right: 700px;
+        }
+
+
+
+        #inside-cart{
+            width: 1435px;
+            height: auto;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            
+        }
+
+        #bj{
+            padding: 20px;
+            text-align: center;
+        }
+        
+
+        .description{
+            padding: 20px;
+            text-align: center;
+        }
+
+        .quantity{
+            padding: 20px;
+            text-align: center;
+        }
+
+        #total{
+            justify-content: center;
+            justify-content: baseline;
+            background-color: white;
+            border: solid black 3px;
+            display: flex;
+        }
+
+        @media (max-width:800px){
+            #container{
+                width: 90%
+                
+            }
+        }
+
+        @media (max-width:800px){
+            img{
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 800px){
+            nav{
+                background-color: rgb(114, 6, 6);
+                color: white;
+            }
+        }
+
+
+
