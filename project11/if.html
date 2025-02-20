@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset= "UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaming Level Check </title>
+</head>
+<body>
+    <h2>What's your gaming level?</h2>
+    <p>Enter your gaming level (beginner, intermediate, advanced):</p>
+    <input type="text" id="levelInput" placeholder="Enter level">
+    <button onclick="checkGamingLevel()">Submit</button>
+
+    <p id="result"></p>
+
+    <script>
+        function checkGamingLevel() {
+            let level = document.getElementById("levelInput").value.toLowerCase();
+            let result = document.getElementById("result");
+
+            if (level === "beginner"){
+                result.innerHTML = "You're just getting started! Welcome to the world of gaming!";
+            } else if (level === "intermediate"){
+                result.innerHTML = "You're on your way to mastering your skills! Keep it up!";
+            } else if (level === "advanced"){
+                result.innerHTML = "Wow, you're a pro! The gaming world is your playground!";
+            } else {
+                result.innerHTML = "Oops! Please enter a valid level: beginner, intermediate, or advanced.";
+            }
+        }
+    </script>
+</body>
+</html>
