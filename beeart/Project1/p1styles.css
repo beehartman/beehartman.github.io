@@ -1,0 +1,176 @@
+body{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#content{
+    width: 1440px;
+    margin: 0px auto;
+    
+}
+
+.banner{
+    max-width: fit-content;
+    height: 300px;
+    align-content: center;
+}
+
+nav{
+    background-color: white;
+    color: black;
+    display: flex;
+    list-style: none;
+    font-size: 50px;
+    justify-content: center;
+    gap: 50px;
+}
+
+nav li a{
+    text-decoration: none;
+}
+
+nav a{
+    color: black;
+}
+
+nav li a:hover{
+    color: rgb(251, 173, 27);
+}
+
+nav li a.active{
+    text-decoration: underline;
+    color:  rgb(251, 173, 27);
+   
+}
+
+#list-items{
+    display: flex;
+    gap: 50px;
+    padding-top: 80px;
+    padding-bottom: 50px;
+}
+
+#home-split{
+    display: flex;
+}
+
+
+#posthome{
+    width: 798px;
+    height: 815px;
+    padding-right: 92px;
+    background-repeat: no-repeat;
+    background-image: url(posthome.png)
+    
+}
+
+#featured{
+    width: 450px;
+}
+
+#profilecontent{
+    display: flex;
+    position: absolute;
+}
+
+#bio{
+    z-index: -1;
+    width: 664px;
+    height: 125px;
+    background-color: rgb(189, 133, 28);
+    border-radius: 5%;
+    color: white;
+    font-size: 25px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+#biotext{
+  
+}
+
+
+#favs{
+    width: 500px;
+    height: 350px;
+    background-color: rgb(251, 173, 27);
+    font-size: 25px;
+    padding-left: 40px;
+    margin-left: 30px;
+}
+
+#proimages{
+    display: grid;
+    grid-template-columns: 100px 200px 100px;
+    grid-template-rows: 50px 100px; 
+    gap: 100px; 
+    margin-top: 150px;
+}
+
+.images{
+    align-items: center;
+}
+
+#gallery{
+   display: flex;
+}
+
+#posts{
+    display: grid;
+    grid-template-columns: 100px 200px 100px;
+    grid-template-rows: 50px 100px; 
+    gap: 60%; 
+}
+
+#upload{
+    
+}
+
+#container2{
+    margin-left: 140%;
+    padding-left: 500px;
+    height: 529px;
+    background-repeat: no-repeat;
+    background-image: url(upload-post.png);
+}
+
+#button{
+    width: 200px;
+    float: left;
+    font-size: larger;
+    font-weight: bold;
+    margin-left: 155%;
+    margin-top: 4%;
+    background-color: rgb(251, 173, 27);
+    border-radius: 3%;
+    list-style: none;
+    padding: 15px;
+}
+
+#button a{
+    text-decoration: none;
+}
+
+#button a{
+    color: black;
+}
+
+#button a:hover{
+    color: rgb(255, 255, 255);
+}
+
+#pro-banner{
+ z-index: -2;
+}
+
+#propic{
+    z-index: 2;
+}
+
+
+
+@media (max-width:600px) {
+    #container2{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
