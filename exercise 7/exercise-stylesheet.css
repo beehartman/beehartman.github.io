@@ -1,0 +1,22 @@
+header {
+    background-color:rgb(54, 53, 53);
+    padding: 1.5rem 1rem;
+    width: 100%;
+
+    margin: 0 auto;  
+  }
+
+  nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  nav li {
+    display: inline-block;
+    padding: 0.5rem 0;
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+  }

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 7</title>
+    <link rel="stylesheet" href="ex7-stylesheet.css" />
+    <link rel="icon" href="images/favicon.png" type="image/x-icon"/>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul id="nav-links">
+                <img src="images/favicon.png" alt="Grim Gatherings Logo">
+                <li><a href="#" class="home active">Grim Gatherings</a></li>
+                <li><a href="#" class="events">Events</a></li>
+                <li><a href="#" class="about">About</a></li>
+                <li><a href="#" class="contact">Contact</a></li>
+            </ul>
+
+            <div class="hamburger-icon" id="hamburger-icon">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+    <div id="container">
+        <img src="images/banner.png" alt="40% off banner"/>
+        <div id="home-page">
+            <div id="home-image">
+                <img src="images/nocturnoftheheart.png" alt="Nocturne of the Heart" />
+            </div>
+            <div id="home-text">
+                <h1> Want To Do Something Cool for V-Day? </h1>
+                <h3> Nocturne of the Heart: A Gothic Romance </h3>
+                <p> Nocturne of the Heart is a gothic romantic dinner with candlelight, elegant food, and a mysterious atmosphere—perfect for couples seeking a dark, unforgettable night.</p>
+                <button class="book-now-btn">Book Now</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const hamburgerIcon = document.getElementById('hamburger-icon');
+        const navLinks = document.getElementById('nav-links');
+
+        hamburgerIcon.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

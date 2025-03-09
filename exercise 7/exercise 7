@@ -1,0 +1,68 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grim Gatherings - Home</title>
+    <link rel="stylesheet" href="ex7-stylesheet.css" />
+    
+  </head>
+
+    <body>
+        <Header>
+            <nav>
+                <img src="src/assets/favicon.png">
+                <div id="hamburger-menu" class="hamburger-menu">
+                  &#9776; 
+                </div>
+                <ul id="nav-links">
+                  <li><a href="/" class="home-link">Grim Gatherings</a></li>
+                  <li><a href="#" class="events-link">Events</a></li>
+                  <li><a href="#" class="about-link">About</a></li>
+                  <li><a href="#" class="contact-link">Contact</a></li>
+                </ul>
+              </nav>
+        </Header>
+
+    <div id="container">
+      <div id="banner">
+        <img src="src/assets/banner.png" alt="40% off banner" />
+      </div>
+
+      <div id="home-page">
+        <div id="home-image">
+          <img src="src/assets/nocturnoftheheart.png" alt="Nocturne of the Heart" />
+        </div>
+        <div id="home-text">
+          <h1> Want To Do Something Cool for V-Day? </h1>
+          <h3> Nocturne of the Heart: A Gothic Romance </h3>
+          <p> Nocturne of the Heart is a gothic romantic dinner with candlelight, elegant food, and a mysterious atmosphere—perfect for couples seeking a dark, unforgettable night.</p>
+          <button class="book-now-btn">Book Now</button>
+        </div>
+      </div>
+      <footer>
+        <p>© 2025 Grim Gatherings. All rights reserved.</p>
+        <p>
+          <a href="/privacy-policy">Privacy Policy</a> | <a href="/terms-of-service">Terms of Service</a>
+        </p>
+      </footer>
+    </div>
+    <script>
+
+        const links = document.querySelectorAll('nav a');
+      
+        
+        links.forEach(link => {
+          if (link.href === window.location.href) {
+            link.classList.add('active');
+          }
+        });
+      
+        const hamburgerMenu = document.getElementById('hamburger-menu');
+        const navLinks = document.getElementById('nav-links');
+      
+        hamburgerMenu.addEventListener('click', () => {
+          navLinks.classList.toggle('show');
+        });
+      </script>
+  </body>
+</html>
