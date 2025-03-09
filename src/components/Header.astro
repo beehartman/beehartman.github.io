@@ -1,0 +1,138 @@
+<header>
+  <nav>
+    <img src="src/assets/favicon.png">
+    <div id="hamburger-menu" class="hamburger-menu">
+      &#9776; 
+    </div>
+    <ul id="nav-links">
+      <li><a href="/" class="home-link">Grim Gatherings</a></li>
+      <li><a href="/events" class="events-link">Events</a></li>
+      <li><a href="/about" class="about-link">About</a></li>
+      <li><a href="/contact" class="contact-link">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<style>
+  header {
+    background-color:rgb(54, 53, 53);
+    padding: 1.5rem 1rem;
+    width: 100%;
+
+    margin: 0 auto;  
+  }
+
+  nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+  }
+
+  nav li {
+    display: inline-block;
+    padding: 0.5rem 0;
+  }
+
+  nav a {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    color: black;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  .home-link:hover {
+    background-color: #FF0BEF;
+  }
+
+  .events-link:hover {
+    background-color: #FFFB0C;
+  }
+
+  .about-link:hover {
+    background-color: #6BF933;
+  }
+
+  .contact-link:hover {
+    background-color: #00f0ff;
+  }
+
+  
+  nav a.active {
+    color:rgb(255, 255, 255);
+    background-color: transparent; 
+  }
+
+  #hamburger-menu {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    margin-right: 1rem;
+  }
+
+  #nav-links {
+    display: flex;
+  }
+
+  @media (max-width: 768px) {
+    #hamburger-menu {
+      display: block; 
+    }
+
+    #nav-links {
+      display: none; 
+      flex-direction: column;
+      width: 100%;
+      background-color: #7A7878;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    #nav-links li {
+      width: 100%;
+      padding: 1rem 0;
+    }
+
+    #nav-links li a {
+      padding: 0.5rem 1rem;
+      width: 100%;
+      display: block;
+    }
+
+    #nav-links.show {
+      display: flex; 
+    }
+  }
+</style>
+
+<script>
+
+  const links = document.querySelectorAll('nav a');
+
+  
+  links.forEach(link => {
+    if (link.href === window.location.href) {
+      link.classList.add('active');
+    }
+  });
+
+  const hamburgerMenu = document.getElementById('hamburger-menu');
+  const navLinks = document.getElementById('nav-links');
+
+  hamburgerMenu.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+  });
+</script>
