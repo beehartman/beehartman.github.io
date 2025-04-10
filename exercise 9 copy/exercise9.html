@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CSS Grid Image Gallery</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <div class="wrapper">
+    <h1 class="gallery-title">What I ate last week:</h1>
+
+    <!-- ✅ ONE gallery div here -->
+    <div class="gallery">
+      <div class="image-container">
+        <img src="yogurt copy.jpg" alt="Apple Yogurt Parfait">
+      </div>
+      <div class="image-container">
+        <img src="board copy.jpg" alt="Snack Board">
+      </div>
+      <div class="image-container">
+        <img src="chicken&rice.jpg" alt="BBQ Chicken & Rice">
+      </div>
+      <div class="image-container">
+        <img src="MM&B copy.jpg" alt="*Special Noodles*">
+      </div>
+      <div class="image-container">
+        <img src="sub copy.jpg" alt="Turkey, Bacon, Cheese Sub">
+      </div>
+      <div class="image-container">
+        <img src="tots&meat copy.jpg" alt="Roast Beef & Tots">
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modal-img" />
+    <div id="caption"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
