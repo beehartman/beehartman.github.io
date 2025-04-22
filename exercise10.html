@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>YOHOOOO LAST EXERCISE!!!</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 1rem;
+      text-align: center;
+      background-color: #cc9b75;
+      color: #614937;
+    }
+
+    .slideshow-container {
+      max-width: 600px;
+      margin: auto;
+      position: relative;
+      background: rgb(209, 182, 155);
+      border-radius: 10px;
+      padding: 1rem;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .title {
+      margin: 1rem 0 0.5rem;
+    }
+
+    a#photo-link {
+      color: #251c15;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    a#photo-link:hover {
+      text-decoration: underline;
+    }
+
+    .nav-buttons {
+      margin-top: 1rem;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    button {
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      background-color: #333;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #555;
+    }
+
+    @media (max-width: 600px) {
+      .slideshow-container {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Great Depression Photos – Library of Congress</h1>
+  <div class="slideshow-container">
+    <h2 class="title" id="photo-title">Loading...</h2>
+    <img id="photo-img" src="" alt="Photo" />
+    <p><a id="photo-link" href="#" target="_blank">View on LOC</a></p>
+    <div class="nav-buttons">
+      <button onclick="prevPhoto()">Previous</button>
+      <button onclick="nextPhoto()">Next</button>
+    </div>
+  </div>
+
+  <script>
+    let photos = [];
+    let currentIndex = 0;
+
+    function displayPhoto(index) {
+      const title = document.getElementById('photo-title');
+      const img = document.getElementById('photo-img');
+      const link = document.getElementById('photo-link');
+
+      const item = photos[index];
+      title.textContent = item.title;
+      img.src = item.image_url[0];
+      img.alt = item.title;
+      link.href = item.url;
+    }
+
+    function nextPhoto() {
+      currentIndex = (currentIndex + 1) % photos.length;
+      displayPhoto(currentIndex);
+    }
+
+    function prevPhoto() {
+      currentIndex = (currentIndex - 1 + photos.length) % photos.length;
+      displayPhoto(currentIndex);
+    }
+
+    fetch('https://www.loc.gov/photos/?q=great+depression&fo=json')
+      .then(response => response.json())
+      .then(data => {
+        photos = data.results.filter(item => item.image_url).slice(0, 10);
+        if (photos.length > 0) {
+          displayPhoto(currentIndex);
+        } else {
+          document.getElementById('photo-title').textContent = 'No photos found.';
+        }
+      })
+      .catch(error => {
+        console.error('Error fetching data:', error);
+        document.getElementById('photo-title').textContent = 'Failed to load photos.';
+      });
+  </script>
+</body>
+</html>
